@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>حساب المعدل العام</title>
+  <style>
+    body {
+  text-align: right;
+  text-orientation: rtl;
+  background-color: #EEE;
+    font-size: 15pt;
+}
+input{
+  border: 2px solid #000;
+  padding:10px;
+  width: 320px;
+  margin: 0px
+  border-radius: 0px;
+  
+}
+.main{
+  background-color: #FC82A7;
+  border-radius:10px;
+  position: relative;
+  padding:10px;
+
+}
+.main * {
+  display: block;
+}
+.main button {
+  background-color: #E33C70;
+  border:0px;
+  width:100%;
+  
+  padding : 10px 20px;
+  margin-top : 10px;
+  color: #FFF;
+  border-radius:10px ;
+}
+#note{
+  color : #A50838;
+  display: block;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-style: bold;
+  padding: 20px
+}
+
+  </style>
+</head>
+<body>
+  <div class="main">
+  <label for="rr">نقطة الجهوي</label>
+  <input type="text" name="" id="regional">
+  <p></p>
+  <label for="">
+    أريد ان يكون معدلي العام هو 
+ </label>
+  <input type="text" name="" id="NoteiWant">
+  <button onclick="displayName();">
+    معدل الامتحان الوطني
+  </button>
+  </div>
+    <h3>من الضرري ان تكون نقطة الوطني هي :  <span id="note"></span> </h3>
+<br><br><br><br>
+<small>المعدل العام : 25٪ جهوي + 75٪ وطني</small>
+<br><small>Devloped With ❤️ by BELLA M.</small>
+  <script>
+    function displayName(){
+     var regional = document.getElementById('regional').value;
+     var NoteiWant= document.getElementById('NoteiWant').value;
+     var RegionalMoyenne = regional * 0.25 ;
+     var FinalNote = (NoteiWant - RegionalMoyenne) / 0.75 ;
+    document.getElementById('note').innerHTML = FinalNote;
+   
+    // author : BELLA MUHAMMED
+    // date   : 20222/04/04
+    // License: Open Source 
+    // E-mail : MUHAMMED.BELLA@yahoo.com
+     
+}
+  </script>
+</body>
+</html>
